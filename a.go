@@ -48,31 +48,3 @@ func main() {
 	s = append(s, 1, 2, 3)
 	fmt.Println(s)
 }
-
-// 输出运行结果
-type People interface {
-	Show()
-}
-
-type Student struct{}
-
-func (stu *Student) Show() {
-
-}
-
-func live() People {
-	var stu *Student
-	return stu
-}
-
-func main() {
-
-	if live() == nil {
-		fmt.Println("AAAAAAA", live())
-	} else {
-		fmt.Println("BBBBBBB", live())
-	}
-
-	var s *Student
-	fmt.Println(s == nil)
-}
